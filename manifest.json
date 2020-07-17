@@ -1,0 +1,36 @@
+{
+  "name": "Facebook Auto React",
+  "version": "0.1",
+  "description": "Enables care reacting to posts on facebook by hovering over the like button",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.facebook.com/*"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_title": "Care react",
+    "default_icon": {
+            "16": "care.png",
+            "24": "care.png",
+            "32": "care.png",
+            "48": "care.png",
+            "128": "care.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "icons": {
+         "16": "care.png",
+         "48": "care.png",
+         "128": "care.png"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+          "storage"
+  ]
+}
